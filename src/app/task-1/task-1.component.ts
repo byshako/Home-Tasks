@@ -37,7 +37,6 @@ export class Task1Component implements OnInit {
         this.toDolist[i].done = true;
     }
     onEdit(item) {
-        console.log('jhj', item);
         this.name = item.newName;
         this.editableItem = item;
     }
