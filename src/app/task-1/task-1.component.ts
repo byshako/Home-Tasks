@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./task-1.component.css']
 })
 export class Task1Component implements OnInit {
-    name: string;
+    name: string = '';
     editableItem: any;
     toDolist = [
         {done: true, newName: 'Test 1'},
@@ -24,11 +24,13 @@ export class Task1Component implements OnInit {
     }
 
     onAdd() {
-        this.toDolist.push({
-            done: false,
-            newName: this.name
-        });
-        this.name = '';
+        if(this.name !== ''){
+            this.toDolist.push({
+                done: false,
+                newName: this.name
+            });
+            this.name = '';
+        }
     }
     onDelete(i) {
         this.toDolist.splice(i, 1);
@@ -40,7 +42,6 @@ export class Task1Component implements OnInit {
         this.name = item.newName;
         this.editableItem = item;
     }
-
     onUpdate() {
         this.editableItem.newName = this.name;
         this.name = '';
