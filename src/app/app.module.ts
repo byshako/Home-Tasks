@@ -9,7 +9,8 @@ import { Task2Component } from './task-2/task-2.component';
 import { GoogleMapComponent } from './task-2/google-map/google-map.component';
 import { LocationDetectorComponent } from './task-2/location-detector/location-detector.component';
 import { LocationListComponent } from './task-2/location-list/location-list.component';
-import {MapService} from "./task-2/map.service";
+import { MapService } from './task-2/map.service';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,9 @@ import {MapService} from "./task-2/map.service";
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCBqZfa9wbuz01T1V5AZ-RkDp-VjMTMT74'
+    })
   ],
   providers: [MapService],
   bootstrap: [AppComponent]
