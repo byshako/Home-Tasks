@@ -15,9 +15,9 @@
             </div>
 
             <div class="col-2">
-                <button class="btn btn-primary" (click)="onUpdate()" *ngIf="editableItem; else addBlock">Update</button>
+                <button class="btn btn-primary w-100" (click)="onUpdate()" *ngIf="editableItem; else addBlock">Update</button>
                 <ng-template #addBlock>
-                    <button class="btn btn-primary" (click)="onAdd()">Add new item</button>
+                    <button class="btn btn-primary w-100" (click)="onAdd()">Add new item</button>
                 </ng-template>
             </div>
         </div>
