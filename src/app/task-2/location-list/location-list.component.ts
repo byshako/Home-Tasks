@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MapService } from '../map.service';
 
 @Component({
   selector: 'app-location-list',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location-list.component.css']
 })
 export class LocationListComponent implements OnInit {
-
-  constructor() { }
+  myLocations: any[];
+  constructor(private mapService: MapService) { }
 
   ngOnInit() {
+    this.myLocations = this.mapService.locations;
   }
 
 }

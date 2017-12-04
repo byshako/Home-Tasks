@@ -9,6 +9,7 @@ import { Task2Component } from './task-2/task-2.component';
 import { GoogleMapComponent } from './task-2/google-map/google-map.component';
 import { LocationDetectorComponent } from './task-2/location-detector/location-detector.component';
 import { LocationListComponent } from './task-2/location-list/location-list.component';
+import {MapService} from "./task-2/map.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { LocationListComponent } from './task-2/location-list/location-list.comp
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [MapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
