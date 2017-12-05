@@ -1,26 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MapService} from "../map.service";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
-  selector: 'app-location-detector',
-  templateUrl: './location-detector.component.html',
-  styleUrls: ['./location-detector.component.css']
+    selector: 'app-location-detector',
+    templateUrl: './location-detector.component.html',
+    styleUrls: ['./location-detector.component.css']
 })
 export class LocationDetectorComponent implements OnInit {
-  myLocations: any[];
-  foundLocations: any[];
-  locationName = '';
-  constructor(private mapService: MapService, private http: HttpClient) { }
+    myLocations: any[];
+    foundLocations: any[];
+    locationName = '';
+    @ViewChild('searchInput') searchInput: ElementRef;
+    constructor(private mapService: MapService) {
+    }
 
-  ngOnInit() {
-    this.myLocations = this.mapService.locations;
-  }
-  findLocation(locationName) {
-    return this.http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + locationName +
-        '&key=AIzaSyBI2qfEHOHhY0hfqTzSC_qs1a4LomhVmTI');
-  }
-  addLocation(){
+    ngOnInit() {
+        this.myLocations = this.mapService.locations;
+    }
 
-  }
+    search(locationName) {
+        this.mapService.findLocation(locationName).subscribe((data: any) => {
+            if (data.status === 'OK') {
+                console.log(data);
+                this.foundLocations = data.results;
+            }
+        });
+    }
+
+    onAdd(index) {
+        this.mapService.addLocation(this.foundLocations[index]);
+        this.foundLocations = null;
+        this.searchInput.nativeElement.value = '';
+    }
+
+    enterKeyDetect(event) {
+        if (event.keyCode === 13) {
+            this.search(event.target.value);
+        }
+    }
+
 }
