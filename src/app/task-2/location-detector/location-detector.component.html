@@ -1,10 +1,17 @@
 <div class="row">
   <div class="col-8">
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Input Location Here....">
+      <input type="text" class="form-control" [(ngModel)]="locationName" placeholder="Input Location Here....">
     </div>
   </div>
   <div class="col-4">
-    <button class="btn btn-primary w-100">Search</button>
+    <button class="btn btn-primary w-100" (click)="findLocation(locationName)">Add Location</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="list-group" *ngIf="foundLocations">
+
+    </div>
   </div>
 </div>
