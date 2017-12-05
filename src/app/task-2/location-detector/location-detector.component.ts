@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Component, OnInit} from '@angular/core';
 import {MapService} from "../map.service";
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> parent of 298fb25... 102310
 =======
 import { Component, OnInit } from '@angular/core';
 >>>>>>> parent of 298fb25... 102310
@@ -11,6 +15,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./location-detector.component.css']
 })
 export class LocationDetectorComponent implements OnInit {
+<<<<<<< HEAD
 <<<<<<< HEAD
     myLocations: any[];
     foundLocations: any[];
@@ -44,11 +49,16 @@ export class LocationDetectorComponent implements OnInit {
         }
     }
 =======
+=======
+>>>>>>> parent of 298fb25... 102310
 
   constructor() { }
 
   ngOnInit() {
   }
+<<<<<<< HEAD
+>>>>>>> parent of 298fb25... 102310
+=======
 >>>>>>> parent of 298fb25... 102310
 
 }

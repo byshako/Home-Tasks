@@ -33,5 +33,8 @@ export class MapService {
   ];
   constructor() { }
 
+<<<<<<< HEAD
+>>>>>>> parent of 298fb25... 102310
+=======
 >>>>>>> parent of 298fb25... 102310
 }
