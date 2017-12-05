@@ -9,8 +9,10 @@ import { MapService } from '../map.service';
 export class GoogleMapComponent implements OnInit {
   lat: number = 41.7151377;
   lng: number = 44.827096;
+  myLocations: any[];
   constructor(private mapService: MapService) { }
 
   ngOnInit() {
+    this.myLocations = this.mapService.locations;
   }
 }
