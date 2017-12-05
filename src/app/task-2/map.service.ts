@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class MapService {
+<<<<<<< HEAD
     locations = [
         {name: 'Tbilisi, Georgia', lat: 41.7151377, lng: 44.827096},
         {name: 'Batumi, Georgia', lat: 41.6167547, lng: 41.6367455},
@@ -24,4 +25,13 @@ export class MapService {
         );
         this.locationsChange.emit(true);
     }
+=======
+  locations = [
+    {name: 'Tbilisi, Georgia', lat: 41.7151377, lng: 44.827096},
+    {name: 'Batumi, Georgia', lat: 41.6167547, lng: 41.6367455},
+    {name: 'Kobuleti, Georgia', lat: 41.815997, lng: 41.7838101}
+  ];
+  constructor() { }
+
+>>>>>>> parent of 298fb25... 102310
 }

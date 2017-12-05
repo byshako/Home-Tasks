@@ -13,7 +13,5 @@ export class LocationListComponent implements OnInit {
   ngOnInit() {
     this.myLocations = this.mapService.locations;
   }
-  deleteLocation(i){
-    this.myLocations.splice(i, 1);
-  }
+
 }

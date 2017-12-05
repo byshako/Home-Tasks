@@ -11,8 +11,6 @@ import { LocationDetectorComponent } from './task-2/location-detector/location-d
 import { LocationListComponent } from './task-2/location-list/location-list.component';
 import { MapService } from './task-2/map.service';
 import { AgmCoreModule } from '@agm/core';
-import {HttpModule} from "@angular/http";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,7 +24,6 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCBqZfa9wbuz01T1V5AZ-RkDp-VjMTMT74'
