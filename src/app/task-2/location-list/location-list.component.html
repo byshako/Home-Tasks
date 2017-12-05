@@ -1,6 +1,6 @@
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let location of myLocations;">
-    <h5>{{ location.name }} <button class="btn btn-danger pull-right"><i class="fa fa-trash-o" aria-hidden="true"></i></button></h5>
+  <li class="list-group-item" *ngFor="let location of myLocations; let i = index">
+    <h5>{{ location.name }} <button class="btn btn-danger pull-right" (click)="deleteLocation(i)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></h5>
     <ul>
       <li>Lat: {{ location.lat }}</li>
       <li>Lng: {{ location.lng }}</li>

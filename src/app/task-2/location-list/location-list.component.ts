@@ -14,4 +14,8 @@ export class LocationListComponent implements OnInit {
     this.myLocations = this.mapService.locations;
   }
 
+  deleteLocation(i) {
+    this.myLocations.splice(i, 1);
+  }
+
 }
