@@ -1,3 +1,10 @@
-<p>
-  task-3 works!
-</p>
+<div class="row">
+    <div class="col-12">
+        <hr>
+        <ul class="list-group">
+            <li class="list-group-item" *appMyFor="myList; let names">
+                {{ names }}
+            </li>
+        </ul>
+    </div>
+</div>
