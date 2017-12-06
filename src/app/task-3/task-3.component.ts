@@ -7,12 +7,6 @@ import {Component, OnInit} from '@angular/core';
 })
 export class Task3Component implements OnInit {
   myList = ['Test 1', 'Test 2', 'Test 3', 'Test 4', 'Test 5', 'Test 6', 'Test 7', 'Test 8'];
-
-  constructor() {
-    console.log(this.list);
-  }
-
-  ngOnInit() {
-  }
-
+  constructor() {}
+  ngOnInit() {}
 }

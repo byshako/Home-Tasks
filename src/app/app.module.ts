@@ -14,6 +14,7 @@ import {AgmCoreModule} from '@agm/core';
 import {HttpClientModule} from '@angular/common/http';
 import {Task3Component} from './task-3/task-3.component';
 import { MyforDirective } from './task-3/myfor.directive';
+import { Task4Component } from './task-4/task-4.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { MyforDirective } from './task-3/myfor.directive';
         LocationListComponent,
         Task3Component,
         MyforDirective,
+        Task4Component,
     ],
     imports: [
         BrowserModule,
