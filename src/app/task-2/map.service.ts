@@ -10,14 +10,14 @@ export class MapService {
     ];
     constructor(private http: HttpClient) {
     }
-    findLocation(locationName) {
+
+    findLoc(locationName) {
         return this.http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + locationName +
             '&key=AIzaSyBI2qfEHOHhY0hfqTzSC_qs1a4LomhVmTI');
     }
-
-    addLocation(data) {
+    addLoc(data) {
         this.locations.push(
-            {name: data.formatted_address, lat: data.geometry.location.lat, lng: data.geometry.location.lng}
+            {name: data.formatted_address, lat: data.geometry.location.lat, lng: data.geometry.location.lng }
         );
     }
 }

@@ -1,6 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MapService} from "../map.service";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
     selector: 'app-location-detector',
@@ -8,13 +7,23 @@ import {HttpClient} from "@angular/common/http";
     styleUrls: ['./location-detector.component.css']
 })
 export class LocationDetectorComponent implements OnInit {
-    myLocations: any[];
-
-    constructor(private mapService: MapService, private http: HttpClient) {
+    foundLocs: any[];
+    @ViewChild('searchLoc') searchLoc: ElementRef;
+    constructor(private mapService: MapService) {
     }
 
-    ngOnInit() {
-        this.myLocations = this.mapService.locations;
+    ngOnInit() {}
+    searchLocation(locationName) {
+        this.mapService.findLoc(locationName).subscribe( (data: any) => {
+            if(data.status === 'OK') {
+                this.foundLocs = data.results;
+            }
+        });
     }
 
+    addMyLocation(index){
+        this.mapService.addLoc(this.foundLocs[index]);
+        this.foundLocs = null;
+        this.searchLoc.nativeElement.value = '';
+    }
 }
