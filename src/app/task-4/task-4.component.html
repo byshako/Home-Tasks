@@ -5,6 +5,15 @@
     <app-table></app-table>
   </div>
   <div class="col-12 text-center">
-    <app-pagination></app-pagination>
+    <app-pagination
+            [count]="someCountVar"
+            [page]="somePageVar"
+            [perPage]="somePerPageVar"
+            [pagesToShow]="5"
+            [loading]="someLoadingVar"
+            (onPrev)="prevPage()"
+            (onNext)="nextPage()"
+            (onPage)="goToPage($event)">
+    </app-pagination>
   </div>
 </div>
