@@ -15,6 +15,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {Task3Component} from './task-3/task-3.component';
 import { MyforDirective } from './task-3/myfor.directive';
 import { Task4Component } from './task-4/task-4.component';
+import { TableComponent } from './task-4/table/table.component';
+import { PaginationComponent } from './task-4/pagination/pagination.component';
 
 @NgModule({
     declarations: [
@@ -27,6 +29,8 @@ import { Task4Component } from './task-4/task-4.component';
         Task3Component,
         MyforDirective,
         Task4Component,
+        TableComponent,
+        PaginationComponent,
     ],
     imports: [
         BrowserModule,
