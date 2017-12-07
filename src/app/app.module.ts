@@ -17,6 +17,7 @@ import { MyforDirective } from './task-3/myfor.directive';
 import { Task4Component } from './task-4/task-4.component';
 import { TableComponent } from './task-4/table/table.component';
 import { PaginationComponent } from './task-4/pagination/pagination.component';
+import {TableDataService} from './task-4/table-data.service';
 
 @NgModule({
     declarations: [
@@ -43,6 +44,7 @@ import { PaginationComponent } from './task-4/pagination/pagination.component';
     ],
     providers: [
         MapService,
+        TableDataService
     ],
     bootstrap: [AppComponent]
 })

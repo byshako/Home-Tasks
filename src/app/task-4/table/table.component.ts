@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TableDataService} from '../table-data.service';
 
 @Component({
   selector: 'app-table',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
+  userData: any[];
 
-  constructor() { }
+  constructor(private tableData: TableDataService) { }
 
   ngOnInit() {
+    this.userData = this.tableData.tableData;
   }
 
 }
