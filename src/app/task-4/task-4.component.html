@@ -1,19 +1,9 @@
 <div class="row">
   <div class="col-12">
-    <hr>
-    <h1 class="text-center">Users Data</h1>
+    <h3 class="text-center">Users Data</h3>
     <app-table></app-table>
   </div>
-  <div class="col-12 text-center">
-    <app-pagination
-            [count]="someCountVar"
-            [page]="somePageVar"
-            [perPage]="somePerPageVar"
-            [pagesToShow]="5"
-            [loading]="someLoadingVar"
-            (onPrev)="prevPage()"
-            (onNext)="nextPage()"
-            (onPage)="goToPage($event)">
-    </app-pagination>
+  <div class="col-12">
+    <app-pagination></app-pagination>
   </div>
 </div>
