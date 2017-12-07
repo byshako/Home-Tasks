@@ -28,7 +28,7 @@ export class TableDataService {
     gender: 'Male'
   }, {
     id: 5,
-    first_name: 'idnnie',
+    first_name: 'Idnnie',
     last_name: 'Balthasar',
     email: 'sbalthasar4@odnoklassniki.ru',
     gender: 'Female'

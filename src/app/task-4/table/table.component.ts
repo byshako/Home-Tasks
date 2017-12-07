@@ -8,10 +8,17 @@ import {TableDataService} from "../table-data.service";
 })
 export class TableComponent implements OnInit {
   myData: any[];
+  key: string = '';
+  reverse: boolean = false;
   constructor(private usersData: TableDataService) { }
 
   ngOnInit() {
     this.myData = this.usersData.tableData;
+  }
+
+  sort(key){
+    this.key = key;
+    this.reverse = !this.reverse;
   }
 
 }
