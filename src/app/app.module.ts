@@ -17,6 +17,7 @@ import { TableComponent } from './task-4/table/table.component';
 import { PaginationComponent } from './task-4/pagination/pagination.component';
 import {TableDataService} from './task-4/table-data.service';
 import {Ng2OrderModule} from 'ng2-order-pipe';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
     declarations: [
         AppComponent,
@@ -37,13 +38,14 @@ import {Ng2OrderModule} from 'ng2-order-pipe';
         HttpClientModule,
         ReactiveFormsModule,
         Ng2OrderModule,
+        NgxPaginationModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyCBqZfa9wbuz01T1V5AZ-RkDp-VjMTMT74'
         })
     ],
     providers: [
         MapService,
-        TableDataService
+        TableDataService,
     ],
     bootstrap: [AppComponent]
 })

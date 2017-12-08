@@ -8,8 +8,9 @@ import {TableDataService} from "../table-data.service";
 })
 export class TableComponent implements OnInit {
   myData: any[];
-  key: string = '';
+  key: string = 'id';
   reverse: boolean = false;
+  p: number =1;
   constructor(private usersData: TableDataService) { }
 
   ngOnInit() {
